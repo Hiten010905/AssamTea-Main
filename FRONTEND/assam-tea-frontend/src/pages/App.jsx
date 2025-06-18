@@ -21,6 +21,23 @@ import AdminDashboard from './pages/AdminDashBoard';
 import AdminShopPage from './pages/AdminShopPage';
 import WholesalersAdmin from './pages/WholesalersAdmin';
 
+
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Order from "./pages/Order";
+import WholesalersAdmin from "./pages/WholesalersAdmin";
+
+<Router>
+  <Routes>
+    <Route path="/order" element={<Order />} />
+    <Route path="/wholesales" element={<WholesalersAdmin />} />
+  </Routes>
+</Router>
+
+
+
+
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(
     localStorage.getItem("isLoggedIn") === "true"
